@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
     <meta charset="utf-8">
     <title>Arq. Lizbeth Suárez C.</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+
+    <!-- Enlaza el archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Enlaza los archivos JavaScript de Bootstrap (jQuery primero, luego Popper.js y luego Bootstrap JS) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -237,7 +250,13 @@
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-4">
                                 <h1 class="flaticon-bedroom font-weight-normal text-primary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Residential Design</h5>
+                                <h5 class="text-truncate m-0">2D and 3D Modeling </h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1 class="flaticon-brickwall font-weight-normal text-primary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Design Software Handling </h5>
                             </div>
                         </div>
                     </div>
@@ -264,17 +283,32 @@
                         <div class="d-flex flex-column text-center bg-light mx-3 p-4">
                             <h3 class="flaticon-bedroom display-3 font-weight-normal text-primary mb-3"></h3>
                             <h5 class="mb-3">Bedroom Design</h5>
-                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos</p>
+                            <p class="m-0">Create a space where there is a memory</p>
                         </div>
                         <div class="d-flex flex-column text-center bg-light mx-3 p-4">
                             <h3 class="flaticon-kitchen display-3 font-weight-normal text-primary mb-3"></h3>
                             <h5 class="mb-3">Kitchen Design</h5>
-                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos</p>
+                            <p class="m-0">The quality of design affects the quality of our lives</p>
                         </div>
                         <div class="d-flex flex-column text-center bg-light mx-3 p-4">
                             <h3 class="flaticon-bathroom display-3 font-weight-normal text-primary mb-3"></h3>
                             <h5 class="mb-3">Bathroom Design</h5>
-                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos</p>
+                            <p class="m-0">Designing your home is taking care of every space</p>
+                        </div>
+                        <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                            <h3 class="flaticon-office display-3 font-weight-normal text-primary mb-3"></h3>
+                            <h5 class="mb-3">Commercial Design</h5>
+                            <p class="m-0">To have every object in your space tell the story of who you are</p>
+                        </div>
+                        <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                            <h3 class="flaticon-stairs display-3 font-weight-normal text-primary mb-3"></h3>
+                            <h5 class="mb-3">InteriorDesign</h5>
+                            <p class="m-0">To have every object in your space tell the story of who you are</p>
+                        </div>
+                        <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                            <h3 class="flaticon-house display-3 font-weight-normal text-primary mb-3"></h3>
+                            <h5 class="mb-3">Exterior Design</h5>
+                            <p class="m-0">Schedule a day and decorate your home</p>
                         </div>
                     </div>
                 </div>
@@ -311,7 +345,7 @@
 
 
     <!-- Projects Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" id="projects">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 col text-center mb-4">
@@ -333,96 +367,265 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                            <img class="img-fluid" src="img/AREA EXTERIOR/AE.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4">OUTDOOR AREA</h4>
-                            <div class="d-flex align-items-center justify-content-center">
-                               
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <!-- HTML -->
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                    <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
                                     <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+                                    </label>
+                                
+                                        <div class="carrusel-imagenes">
+                                            <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                                <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                            </a>
+                                        <div class="carrusel-contenido">
+                                            <img src="img/AREA EXTERIOR/AE1.jpg" alt="Imagen 1">
+                                            <img src="img/AREA EXTERIOR/AE2.jpg" alt="Imagen 2">
+                                            <img src="img/AREA EXTERIOR/AE3.jpg" alt="Imagen 3">
+                                            <img src="img/AREA EXTERIOR/AE4.jpg" alt="Imagen 4">
+                                            <img src="img/AREA EXTERIOR/AE5.jpg" alt="Imagen 5">
+                                            <img src="img/AREA EXTERIOR/AE6.jpg" alt="Imagen 6">
+                                            <img src="img/AREA EXTERIOR/AE7.jpg" alt="Imagen 7">
+                                            <img src="img/AREA EXTERIOR/AE8.jpg" alt="Imagen 8">
+                                            <img src="img/AREA EXTERIOR/AE9.jpg" alt="Imagen 9">
+                                            <img src="img/AREA EXTERIOR/AE10.jpg" alt="Imagen 10">
+
+                                        
+                                        </div>
+                                        <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                        
+                                        <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                        
+                                        </div>
+                                    
+
+                                </div>                              
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                            <img class="img-fluid" src="img/AREA SOCIAL/AS.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4">SOCIAL AREA</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                               
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+                                <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
+                                <i class="fa fa-eye"></i>
+                                </label>
+                            
+                                    <div class="carrusel-imagenes">
+                                        <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                            <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                        </a>
+                                    <div class="carrusel-contenido">
+                                        <img src="img/AREA SOCIAL/AS1.jpg" alt="Imagen 1">
+                                        <img src="img/AREA SOCIAL/AS2.jpg" alt="Imagen 2">
+                                        <img src="img/AREA SOCIAL/AS3.jpg" alt="Imagen 3">
+                                        <img src="img/AREA SOCIAL/AS4.jpg" alt="Imagen 4">
+                                        <img src="img/AREA SOCIAL/AS5.jpg" alt="Imagen 5">
+                                        <img src="img/AREA SOCIAL/AS6.jpg" alt="Imagen 6">
+                                        <img src="img/AREA SOCIAL/AS7.jpg" alt="Imagen 7">
+                                        <img src="img/AREA SOCIAL/AS8.jpg" alt="Imagen 8">
+                                        <img src="img/AREA SOCIAL/AS9.jpg" alt="Imagen 9">
+                                        <img src="img/AREA SOCIAL/AS10.jpg" alt="Imagen 10">
+                                        <img src="img/AREA SOCIAL/AS11.jpg" alt="Imagen 11">
+                                        <img src="img/AREA SOCIAL/AS12.jpg" alt="Imagen 12">
+                                                            
+                                    </div>
+                                    <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                    
+                                    <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                    
+                                    </div>
+                                
+
+                            </div>       
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+                            <img class="img-fluid" src="img/BANOS/B.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4"> BATHROOMS </h4>
                             <div class="d-flex align-items-center justify-content-center">
+                                <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
+                                <i class="fa fa-eye"></i>
+                                </label>
+                            
+                                    <div class="carrusel-imagenes">
+                                        <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                            <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                        </a>
+                                    <div class="carrusel-contenido">
+                                        <img src="img/BANOS/B1.jpg" alt="Imagen 1">
+                                        <img src="img/BANOS/B2.jpg" alt="Imagen 2">
+                                        <img src="img/BANOS/B3.jpg" alt="Imagen 3">
+                                        <img src="img/BANOS/B4.jpg" alt="Imagen 4">
+                                        <img src="img/BANOS/B5.jpg" alt="Imagen 5">
+                                        <img src="img/BANOS/B6.jpg" alt="Imagen 6">
+                                        <img src="img/BANOS/B7.jpg" alt="Imagen 7">
+                                        <img src="img/BANOS/B8.jpg" alt="Imagen 8">
+                                        <img src="img/BANOS/B9.jpg" alt="Imagen 9">
+                                        <img src="img/BANOS/B10.jpg" alt="Imagen 10">
+                                      
+
+                                    
+                                    </div>
+                                    <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                    
+                                    <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                    
+                                    </div>
                                 
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+
+                            </div>       
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+                            <img class="img-fluid" src="img/COCINA/CO6.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4">KITCHEN</h4>
+                            <!-- HTML -->
                             <div class="d-flex align-items-center justify-content-center">
+                                <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
+                                <i class="fa fa-eye"></i>
+                                </label>
+                            
+                                    <div class="carrusel-imagenes">
+                                        <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                            <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                        </a>
+                                    <div class="carrusel-contenido">
+                                        <img src="img/COCINA/CO1.jpg" alt="Imagen 1">
+                                        <img src="img/COCINA/CO2.jpg" alt="Imagen 2">
+                                        <img src="img/COCINA/CO3.jpg" alt="Imagen 3">
+                                        <img src="img/COCINA/CO4.jpg" alt="Imagen 4">
+                                        <img src="img/COCINA/CO5.jpg" alt="Imagen 5">
+                                        <img src="img/COCINA/CO.jpg" alt="Imagen 6">
+                                        <img src="img/COCINA/CO7.jpg" alt="Imagen 7">
+                                        <img src="img/COCINA/CO8.jpg" alt="Imagen 8">
+                                        <img src="img/COCINA/CO9.jpg" alt="Imagen 9">
+                                        <img src="img/COCINA/CO10.jpg" alt="Imagen 10">
+                                                                          
+                                    
+                                    </div>
+                                    <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                    
+                                    <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                    
+                                    </div>
                                 
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-5.jpg" alt="">
+                            <img class="img-fluid" src="img/COMERCIAL/CM1.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4">COMMERCIAL</h4>
+                            <!-- HTML -->
                             <div class="d-flex align-items-center justify-content-center">
+                                <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
+                                <i class="fa fa-eye"></i>
+                                </label>
+                            
+                                    <div class="carrusel-imagenes">
+                                        <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                            <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                        </a>
+                                    <div class="carrusel-contenido">
+                                        <img src="img/COMERCIAL/CM.jpg" alt="Imagen 1">
+                                        <img src="img/COMERCIAL/CM2.jpg" alt="Imagen 2">
+                                        <img src="img/COMERCIAL/CM3.jpg" alt="Imagen 3">
+                                        <img src="img/COMERCIAL/CM4.jpg" alt="Imagen 4">
+                                        <img src="img/COMERCIAL/CM5.jpg" alt="Imagen 5">
+                                        <img src="img/COMERCIAL/CM6.jpg" alt="Imagen 6">
+                                        <img src="img/COMERCIAL/CM7.jpg" alt="Imagen 7">
+                                        <img src="img/COMERCIAL/CM8.jpg" alt="Imagen 8">
+                                        <img src="img/COMERCIAL/CM9.jpg" alt="Imagen 9">
+                                        <img src="img/COMERCIAL/CM10.jpg" alt="Imagen 10">
+                                        <img src="img/COMERCIAL/CM11.jpg" alt="Imagen 11">
+                                        
+                                    </div>
+                                    <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                    
+                                    <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                    
+                                    </div>
                                 
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="img/portfolio-6.jpg" alt="">
+                            <img class="img-fluid" src="img/DORMITORIOS/DM.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
                             <h4 class="text-white mb-4">BEDROOMS</h4>
+                            <!-- HTML -->
                             <div class="d-flex align-items-center justify-content-center">
+                                <input type="checkbox" id="mostrar-imagenes" style="display: none;">
+                                <label for="mostrar-imagenes" class="btn btn-outline-primary m-1">
+                                <i class="fa fa-eye"></i>
+                                </label>
+                            
+                                    <div class="carrusel-imagenes">
+                                        <a href="#projects" onclick="cerrarCarruselYRedirigir()">
+                                            <button class="btn btn-outline-primary m-1">Cerrar</button>
+                                        </a>
+                                    <div class="carrusel-contenido">
+                                        <img src="img/DORMITORIOS/DM1.jpg" alt="Imagen 1">
+                                        <img src="img/DORMITORIOS/DM2.jpg" alt="Imagen 2">
+                                        <img src="img/DORMITORIOS/DM3.jpg" alt="Imagen 3">
+                                        <img src="img/DORMITORIOS/DM4.jpg" alt="Imagen 4">
+                                        <img src="img/DORMITORIOS/DM5.jpg" alt="Imagen 5">
+                                        <img src="img/DORMITORIOS/DM6.jpg" alt="Imagen 6">
+                                        <img src="img/DORMITORIOS/DM7.jpg" alt="Imagen 7">
+                                        <img src="img/DORMITORIOS/DM8.jpg" alt="Imagen 8">
+                                        <img src="img/DORMITORIOS/DM9.jpg" alt="Imagen 9">
+                                        <img src="img/DORMITORIOS/DM10.jpg" alt="Imagen 10">
+                                        <img src="img/DORMITORIOS/DM11.jpg" alt="Imagen 11">
+                                        <img src="img/DORMITORIOS/DM12.jpg" alt="Imagen 12">
+                                        <img src="img/DORMITORIOS/DM13.jpg" alt="Imagen 13">
+                                        <img src="img/DORMITORIOS/DM14.jpg" alt="Imagen 14">
+                                        <img src="img/DORMITORIOS/DM15.jpg" alt="Imagen 15">
+                                        <img src="img/DORMITORIOS/DM16.jpg" alt="Imagen 16">
+                                        <img src="img/DORMITORIOS/DM17.jpg" alt="Imagen 17">
+
+                                    
+                                    </div>
+                                    <label for="imagen-izquierda" class="carrusel-control carrusel-izquierda">&#10094;</label>
+                                    
+                                    <label for="imagen-derecha" class="carrusel-control carrusel-derecha">&#10095;</label>
+                                    
+                                    </div>
                                 
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                            </div>
+
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -539,6 +742,37 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function cerrarCarruselYRedirigir() {
+            document.getElementById("mostrar-imagenes").checked = false; // Cierra el carrusel
+            window.location.href = "#projects"; // Redirige al usuario a la sección con id="projects"
+        }
+
+        const carruselContenido = document.querySelector(".carrusel-contenido");
+        let mouseX = 0;
+
+        carruselContenido.addEventListener("mousemove", (e) => {
+            const containerWidth = carruselContenido.offsetWidth;
+            const scrollableWidth = carruselContenido.scrollWidth - containerWidth;
+            const scrollX = (e.clientX / containerWidth) * scrollableWidth;
+            carruselContenido.scrollLeft = scrollX;
+            mouseX = e.clientX;
+        });
+
+        carruselContenido.addEventListener("mouseleave", () => {
+            carruselContenido.style.transition = "transform 0.3s ease-in-out";
+            carruselContenido.style.transform = "translateX(0)";
+        });
+
+        carruselContenido.addEventListener("mouseenter", () => {
+            carruselContenido.style.transition = "none";
+        });
+
+        carruselContenido.addEventListener("wheel", (e) => {
+            const delta = e.deltaY || e.detail || e.wheelDelta;
+            carruselContenido.scrollLeft += delta;
+        });
+    </script>
 </body>
 
 </html>

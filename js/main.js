@@ -116,6 +116,8 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ]
     });
+
+    
     
 })(jQuery);
 
